@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Assignment1"
+             x:Class="Assignment1.MainPage">
+
+    <!--<NavigationPage>
+
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Name="item1" Order="Primary" Text="item1" Priority="0"></ToolbarItem>
+        </ContentPage.ToolbarItems>
+
+    </NavigationPage>-->
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Header Background-->
+        <BoxView Grid.Row="0" HeightRequest="270"/>
+        <Image Source="gradient.png" Aspect="AspectFill"/>
+
+        <!--Profile Nmae-->
+
+        <StackLayout>
+            <Label Margin="10" FontSize="15" TextColor="Black" Text="Sound Designer"
+                   HorizontalOptions="Center" VerticalOptions="End" TranslationY="75"
+                   ></Label>
+        </StackLayout>
+
+        <!--Profile Image-->
+        <Image Source="logo.png" HorizontalOptions="Center" VerticalOptions="End" HeightRequest="100" 
+               TranslationY="-60"/>
+
+        <!--Description-->
+        <BoxView BackgroundColor="black" Grid.Row="3"/>
+
+        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always"
+                    HorizontalOptions="Fill"  VerticalOptions="End" TranslationY="70">
+
+            <StackLayout HorizontalOptions="Fill">
+                <Label FontSize="12" Margin="30"
+                       Text="some content here. there is a lot of text because i need to use this text to test a scroll bar"></Label>
+            </StackLayout>
+
+        </ScrollView>
+
+
+    </Grid>
+
+</ContentPage>
